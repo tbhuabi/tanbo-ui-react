@@ -1,0 +1,72 @@
+.ui-nav-inner {
+  display: flex;
+  padding: .7em 1em;
+  cursor: pointer;
+  position: relative;
+  transition: all .2s;
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+  &:focus {
+    @include focus($color-primary, true);
+    z-index: 1;
+  }
+  &:hover {
+    color: $color-primary;
+    background-color: rgba(0, 0, 0, .04);
+  }
+  &.ui-open {
+    > .ui-nav-inner-arrow {
+      color: $color-primary;;
+      > span {
+        transform: rotateZ(0deg);
+      }
+    }
+  }
+  &.ui-active {
+    background-color: $color-primary;
+    color: #fff;
+  }
+  &.ui-thumbnail {
+    border-radius: 0;
+    > ui-nav-thumbnail + .ui-nav-inner-content {
+      width: 0;
+      flex: 0;
+      overflow: hidden;
+    }
+    > ui-nav-thumbnail {
+      flex: 1;
+      padding-left: 16px;
+      transform: scale(1.2);
+    }
+  }
+  &.ui-child-link-active {
+    background-color: $color-primary;
+    color: #fff;
+  }
+
+  .ui-nav-inner-arrow {
+    color: inherit;
+    > span {
+      transform: rotateZ(-90deg);
+    }
+  }
+}
+
+.ui-nav-inner-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.ui-nav-inner-arrow {
+  width: 1em;
+  font-size: 12px;
+  margin-left: 10px;
+  color: $color-gray;
+  > span {
+    display: inline-block;
+    transition: transform .2s;
+  }
+}
+

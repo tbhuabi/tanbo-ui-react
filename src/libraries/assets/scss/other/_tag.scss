@@ -1,0 +1,64 @@
+@mixin tag($type, $color) {
+  &.ui-#{$type} {
+    color: #fff;
+    background-color: $color;
+    border: 1px solid $color;
+    &.ui-outline {
+      @if $type == info {
+        color: darken($color, 20);
+      } @else if ($type == gray) {
+        color: darken($color, 20);
+      } @else {
+        color: $color;
+      }
+      border: 1px solid $color;
+      background-color: rgba(red($color), green($color), blue($color), .1);
+    }
+  }
+}
+
+ui-tag {
+  display: inline-block;
+  padding: .24em .5em;
+  line-height: 1;
+  border-radius: 4px;
+  color: $color-dark;
+  background-color: $color-light;
+  border: 1px solid $color-light;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  &-sm {
+    font-size: .8em;
+  }
+  &.ui-outline {
+    border: 1px solid $color-light;
+    background-color: #fff;
+  }
+  @include tag(gray, $color-gray);
+  @include tag(dark, $color-dark);
+  @include tag(primary, $color-primary);
+  @include tag(info, $color-info);
+  @include tag(success, $color-success);
+  @include tag(warning, $color-warning);
+  @include tag(danger, $color-danger);
+
+  &.ui-circle {
+    border-radius: 1em;
+  }
+}
+
+.ui-tag-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline;
+  padding: 0 0 0 3px;
+  opacity: .5;
+  outline: none;
+  &:hover {
+    opacity: 1;
+    font-weight: 600;
+  }
+}

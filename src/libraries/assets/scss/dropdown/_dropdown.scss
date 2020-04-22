@@ -1,0 +1,8 @@
+ui-dropdown {
+  display: inline-block;
+  position: relative;
+  > .ui-btn-toggle {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

@@ -1,0 +1,15 @@
+//@import "~@tanbo/tbus/bundles/editor.min.css";
+
+ui-editor {
+  display: block;
+  margin-bottom: 1em;
+  position: relative;
+  z-index: 0;
+}
+
+.ui-input-editor {
+  left: -9999px;
+  top: -9999px;
+  position: absolute;
+  opacity: 0;
+}

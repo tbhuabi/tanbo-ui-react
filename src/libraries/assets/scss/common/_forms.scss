@@ -1,0 +1,113 @@
+.ui-form {
+  padding: 20px;
+  overflow: hidden;
+
+  > .ui-row {
+    margin-left: 0;
+    margin-right: 0;
+    > [class^="ui-col-"], >[class*=" ui-col-"] {
+      padding: 0;
+    }
+  }
+
+  &.ui-form-flow {
+    .ui-form-group {
+      display: block;
+
+      > .ui-control-label {
+        text-align: left;
+      }
+    }
+  }
+
+  &.ui-form-inline {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .ui-form-group {
+      display: inline-flex;
+      margin-right: 20px;
+      vertical-align: top;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ui-form-group {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.ui-control-label {
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: $form-control-padding-vertical;
+  padding-bottom: $form-control-padding-vertical;
+
+  &-sm {
+    padding-top: $form-control-padding-vertical-sm;
+    padding-bottom: $form-control-padding-vertical-sm;
+  }
+
+  &-lg {
+    padding-top: $form-control-padding-vertical-lg + 2;
+    padding-bottom: $form-control-padding-vertical-lg + 2;
+  }
+
+  &-compact {
+    line-height: 1;
+  }
+
+  > small {
+    font-size: .8em;
+    opacity: .9;
+  }
+
+  &-thick {
+    font-weight: bold;
+  }
+
+  &-thin {
+    font-weight: 300;
+  }
+}
+
+.ui-control-static {
+  padding-top: $form-control-padding-vertical;
+  padding-bottom: $form-control-padding-vertical;
+
+  &-sm {
+    padding-top: $form-control-padding-vertical-sm;
+    padding-bottom: $form-control-padding-vertical-sm;
+  }
+
+  &-lg {
+    padding-top: $form-control-padding-vertical-lg + 2;
+    padding-bottom: $form-control-padding-vertical-lg + 2;
+  }
+}
+
+.ui-control-value, .ui-control-static {
+  flex: 1;
+  margin: 0;
+
+  > .ui-form-control, > ui-select, > ui-input[type=date], ui-input-group {
+    width: 100%;
+  }
+
+  > label {
+    display: inline-block;
+    cursor: pointer;
+
+    > ui-input {
+      vertical-align: top;
+    }
+  }
+}
+
+.ui-btn-wrap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include clearfix;
+}

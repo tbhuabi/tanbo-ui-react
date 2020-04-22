@@ -1,0 +1,27 @@
+ui-nav-item {
+  display: block;
+
+  &.ui-thumbnail {
+    position: relative;
+
+    &:hover {
+      > ui-nav-inner:not(.ui-child-link-active) {
+        color: $color-primary;
+      }
+    }
+
+    > ui-nav {
+      background-color: #fff;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
+
+      &:not(.ui-thumbnail) {
+        border-radius: 3px;
+        min-width: 200px;
+        padding: 10px $grid-column-padding;
+      }
+    }
+  }
+}

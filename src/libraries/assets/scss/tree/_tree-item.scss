@@ -1,0 +1,9 @@
+ui-tree-item {
+  display: block;
+  position: relative;
+  &:last-child {
+    > ui-tree-inner > .ui-tree-inner-line2 {
+      height: 50%;
+    }
+  }
+}

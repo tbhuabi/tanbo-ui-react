@@ -1,0 +1,25 @@
+ui-tree-inner {
+  display: block;
+  position: relative;
+  line-height: 1.5em;
+  &:hover {
+    background-color: rgba(0, 0, 0, .05);
+  }
+}
+
+.ui-tree-inner-line {
+  position: absolute;
+  left: 0;
+  width: 0.5em;
+  top: 50%;
+  border-bottom: 1px dotted $tree-line-color;
+  transform: translateX(1em);
+}
+
+.ui-tree-inner-line2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translateX(1em);
+  border-left: 1px dotted $tree-line-color;
+}

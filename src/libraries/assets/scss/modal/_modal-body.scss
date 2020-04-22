@@ -1,0 +1,10 @@
+ui-modal-body {
+  display: block;
+  flex: 1;
+  padding: $container-horizontal-padding + 5;
+  overflow-y: auto;
+  background-color: $color-lighter;
+  &:first-child {
+    padding-top: $container-horizontal-padding * 2;
+  }
+}

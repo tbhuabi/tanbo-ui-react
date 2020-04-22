@@ -1,0 +1,81 @@
+@mixin timeline-item-style($name, $color) {
+  &.ui-#{$name} {
+    opacity: 1;
+
+    > .ui-timeline-icon {
+      border-color: $color;
+      background-color: $color;
+    }
+
+    > .ui-timeline-line {
+      border-color: $color;
+    }
+  }
+}
+
+ui-timeline-item {
+  display: block;
+  position: relative;
+  padding-left: 1.5em;
+  padding-bottom: 1em;
+  font-weight: 500;
+  opacity: .76;
+  @include clearfix;
+
+  &:first-of-type {
+    .ui-timeline-line {
+      top: 1em;
+    }
+  }
+
+  &:last-of-type {
+    .ui-timeline-line {
+      bottom: calc(100% - 1em);
+    }
+  }
+
+  @include timeline-item-style(checked, $color-primary);
+  @include timeline-item-style(dark, $color-dark);
+  @include timeline-item-style(gray, $color-gray);
+  @include timeline-item-style(primary, $color-primary);
+  @include timeline-item-style(info, $color-info);
+  @include timeline-item-style(success, $color-success);
+  @include timeline-item-style(warning, $color-warning);
+  @include timeline-item-style(danger, $color-danger);
+}
+
+.ui-timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px solid $color-gray-light;
+}
+
+.ui-timeline-icon {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  left: -4px;
+  top: .5em;
+  background-color: #fff;
+  border: 1px solid $color-gray;
+}
+
+.ui-timeline-title {
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.2em;
+
+  > small {
+    font-weight: normal;
+    opacity: .8;
+  }
+}
+
+.ui-timeline-content {
+  font-weight: normal;
+  margin: 0;
+}

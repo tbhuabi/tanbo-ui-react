@@ -1,0 +1,228 @@
+ui-input[type=date] {
+  display: inline-block;
+  cursor: auto;
+  width: auto;
+  text-align: left;
+
+  &.ng-touched.ng-invalid .ui-dropdown-input {
+    box-shadow: none;
+    border-color: $form-control-border-color-warning;
+  }
+
+  ui-dropdown-input {
+    text-align: inherit;
+  }
+}
+
+.ui-date-dropdown {
+  width: 100%;
+}
+
+.ui-date-dropdown-menu {
+  padding: 0;
+  width: 212px;
+}
+
+.ui-date-panel-week {
+  border-bottom: 1px solid $color-light;
+  background-color: $color-lighter;
+}
+
+.ui-date-panel-day {
+  font-size: 14px;
+
+  td:hover {
+    color: $color-primary;
+  }
+
+  .ui-date-key {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.ui-date-container {
+  width: 210px;
+  position: relative;
+  font-size: 14px;
+  user-select: none;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.ui-date-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  td {
+    padding: 0;
+  }
+
+  .ui-date-body {
+    text-align: center;
+
+    td {
+      width: 30px;
+      height: 30px;
+
+      &:first-child, &:last-child {
+        color: $color-gray-dark;
+      }
+
+      button {
+        &.ui-no-current-month {
+          color: $color-gray;
+        }
+
+        &:disabled {
+          background-color: $color-lighter;
+          color: $color-gray;
+          cursor: not-allowed;
+        }
+
+        &.ui-current-day {
+          color: $color-primary;
+          font-weight: bold;
+        }
+
+        &.ui-selected-day {
+          color: #fff;
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+.ui-date-head {
+  white-space: nowrap;
+
+  tr {
+    height: 30px;
+    border-bottom: 1px solid $color-light;
+
+    td {
+      &:first-child, &:last-child {
+        width: 48px;
+
+        button {
+          font-size: 16px;
+        }
+      }
+
+      .ui-active {
+        color: $color-primary;
+        font-weight: bold;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.ui-date-years, .ui-date-mouths {
+  height: 210px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 25px;
+    li {
+      float: left;
+      width: 25%;
+    }
+  }
+}
+
+.ui-date-key {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: inherit;
+  border-radius: 3px;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &.ui-active {
+    color: #fff;
+    background-color: $color-primary;
+  }
+
+  &:disabled {
+    color: $color-gray;
+    background: none;
+    cursor: not-allowed;
+  }
+}
+
+.ui-date-time-head {
+  height: 36px;
+  line-height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  border-bottom: 1px solid $color-light;
+
+  strong {
+    font-size: 14px;
+  }
+}
+
+.ui-date-time-picker {
+  height: 205px;
+  display: flex;
+}
+
+.ui-date-time-group {
+  flex: 1;
+  min-width: 70px;
+}
+
+.ui-date-time-picker-head {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: $color-lighter;
+  border-bottom: 1px solid $color-light;
+}
+
+.ui-date-time-picker-options {
+  height: 175px;
+  overflow-y: scroll;
+  position: relative;
+  button {
+    @include linker;
+    outline: none;
+    text-align: center;
+    height: 25px;
+  }
+}
+
+.ui-date-btn-wrap {
+  display: flex;
+  padding: 2px 5px;
+  border-top: 1px solid $color-light;
+  div {
+    flex: 1;
+    padding: 5px;
+  }
+}
