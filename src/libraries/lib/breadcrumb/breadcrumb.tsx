@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import { BreadcrumbItem } from './breadcrumb-item';
+import { UIBreadcrumbItem } from './breadcrumb-item';
 
 /**
  * 面包屑
  */
-export class Breadcrumb extends React.Component<any, any> {
-  static Item = BreadcrumbItem;
+export class UIBreadcrumb extends React.Component {
+  static Item = UIBreadcrumbItem;
 
   render() {
     return (

@@ -1,22 +1,39 @@
 import React from 'react';
 import cssModules from 'react-css-modules';
 import styles from './home.scss';
-import bannerImg from '../../assets/images/banner.png';
 
-import { Breadcrumb } from '../../libraries/public-api';
+import { UIBreadcrumb, UILoading, UIPanel, UIStep } from '../../libraries/public-api';
 
 function home() {
   return (
     <div className="home-wrap">
       <div className="container">
-        <Breadcrumb>
-          <Breadcrumb.Item>首页</Breadcrumb.Item>
-          <Breadcrumb.Item>详情</Breadcrumb.Item>
-        </Breadcrumb>
-        <div styleName="banner">
-          <img src={bannerImg} alt="quick start" />
-        </div>
-        <p>简单 快速 高效</p>
+        <UIBreadcrumb>
+          <UIBreadcrumb.Item>首页</UIBreadcrumb.Item>
+          <UIBreadcrumb.Item>详情</UIBreadcrumb.Item>
+        </UIBreadcrumb>
+        <UILoading/>
+        <UIPanel fill theme={'primary'}>
+          <UIPanel.Header>
+            <h3 className="ui-panel-title">标题</h3>
+          </UIPanel.Header>
+          <UIPanel.Body>
+            body
+          </UIPanel.Body>
+          <UIPanel.Footer>
+            footer
+          </UIPanel.Footer>
+        </UIPanel>
+        <UIStep>
+          <UIStep.Item>
+            <h4 className="ui-step-title">正式开发 <small>2019-08-10</small></h4>
+            <p className="ui-step-content">安排相关技术人员开发相关功能。</p>
+          </UIStep.Item>
+          <UIStep.Item>
+            <h4 className="ui-step-title">正式开发 <small>2019-08-10</small></h4>
+            <p className="ui-step-content">安排相关技术人员开发相关功能。</p>
+          </UIStep.Item>
+        </UIStep>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import * as React from 'react';
 /**
  * 面包屑子项
  */
-export class BreadcrumbItem extends React.Component<any, any> {
+export class UIBreadcrumbItem extends React.Component {
   render() {
     return (
       <div className="ui-breadcrumb-item">{
