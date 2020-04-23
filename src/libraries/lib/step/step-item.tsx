@@ -1,19 +1,22 @@
 import * as React from 'react';
-
-export interface StepItemProps {
-  index?: number;
-  status?: 'waiting' | 'complete' | 'current';
-}
+import { StepContext } from './step-context';
 
 /**
  * 步骤条项目
  */
-export class UIStepItem extends React.Component<StepItemProps, any> {
+export class UIStepItem extends React.Component<{}, any> {
+  static contextType = StepContext;
+  context!: React.ContextType<typeof StepContext>;
+
+  componentWillMount(): void {
+    this.context.addItem(this);
+  }
 
   render() {
     const classNames = ['ui-step-item'];
-    if (this.props.status) {
-      classNames.push('ui-' + this.props.status);
+    const status = this.context.getStatus(this);
+    if (status) {
+      classNames.push('ui-' + status);
     }
     return (
       <div className={classNames.join(' ')}>
@@ -21,7 +24,7 @@ export class UIStepItem extends React.Component<StepItemProps, any> {
           <div className="ui-step-item-line">
           </div>
           <div className="ui-step-item-icon">
-            {this.props.index + 1}
+            {this.context.getIndex(this)}
           </div>
         </div>
         <div className="ui-step-item-content">{
@@ -30,5 +33,9 @@ export class UIStepItem extends React.Component<StepItemProps, any> {
         </div>
       </div>
     );
+  }
+
+  componentWillUnmount(): void {
+    this.context.removeItem(this);
   }
 }

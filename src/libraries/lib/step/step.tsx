@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { UIStepItem } from './step-item';
+import { StepContextKlass, StepContext } from './step-context';
 
 export interface StepProps {
   activeIndex?: number;
@@ -12,24 +13,14 @@ export class UIStep extends React.Component<StepProps, any> {
   static Item = UIStepItem;
 
   render() {
-    // const num = this.props.activeIndex;
-    // React.Children.toArray(this.props.children)
-    //   .filter((child: any) => child.type === UIStepItem)
-    //   .forEach((item: any, index) => {
-    //     item.props.activeIndex = index;
-    //     if (num > index) {
-    //       item.props.status = 'complete';
-    //     } else if (num < index) {
-    //       item.props.status = 'waiting';
-    //     } else {
-    //       item.props.status = 'current';
-    //     }
-    //   });
-
+    const provider = new StepContextKlass();
+    provider.activeIndex = this.props.activeIndex;
     return (
-      <div className="ui-step">{
-        this.props.children
-      }</div>
+      <div className="ui-step">
+        <StepContext.Provider value={provider}>{
+          this.props.children
+        }</StepContext.Provider>
+      </div>
     );
   }
 }

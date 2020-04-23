@@ -24,7 +24,23 @@ function home() {
             footer
           </UIPanel.Footer>
         </UIPanel>
-        <UIStep>
+        <UIStep activeIndex={2}>
+          <UIStep.Item>
+            <h4 className="ui-step-title">正式开发 <small>2019-08-10</small></h4>
+            <p className="ui-step-content">安排相关技术人员开发相关功能。</p>
+          </UIStep.Item>
+          <UIStep.Item>
+            <h4 className="ui-step-title">正式开发 <small>2019-08-10</small></h4>
+            <p className="ui-step-content">安排相关技术人员开发相关功能。</p>
+          </UIStep.Item>
+          <UIStep.Item>
+            <h4 className="ui-step-title">正式开发 <small>2019-08-10</small></h4>
+            <p className="ui-step-content">安排相关技术人员开发相关功能。</p>
+          </UIStep.Item>
+          <UIStep.Item>
+            <h4 className="ui-step-title">正式开发 <small>2019-08-10</small></h4>
+            <p className="ui-step-content">安排相关技术人员开发相关功能。</p>
+          </UIStep.Item>
           <UIStep.Item>
             <h4 className="ui-step-title">正式开发 <small>2019-08-10</small></h4>
             <p className="ui-step-content">安排相关技术人员开发相关功能。</p>
