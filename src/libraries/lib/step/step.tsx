@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { UIStepItem } from './step-item';
-import { StepContextKlass, StepContext } from './step-context';
+import { StepContextKlass, StepContext } from './step.context';
 
 export interface StepProps {
   activeIndex?: number;

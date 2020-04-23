@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StepContext } from './step-context';
+import { StepContext } from './step.context';
 
 /**
  * 步骤条项目
