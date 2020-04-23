@@ -24,7 +24,7 @@ export class UIStepItem extends React.Component<{}, any> {
           <div className="ui-step-item-line">
           </div>
           <div className="ui-step-item-icon">
-            {this.context.getIndex(this)}
+            {this.context.getIndex(this) + 1}
           </div>
         </div>
         <div className="ui-step-item-content">{

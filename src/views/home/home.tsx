@@ -2,7 +2,7 @@ import React from 'react';
 import cssModules from 'react-css-modules';
 import styles from './home.scss';
 
-import { UIBreadcrumb, UILoading, UIPanel, UIStep } from '../../libraries/public-api';
+import { UIBreadcrumb, UILoading, UIPanel, UIStep, UITimeline } from '../../libraries/public-api';
 
 function home() {
   return (
@@ -50,6 +50,20 @@ function home() {
             <p className="ui-step-content">安排相关技术人员开发相关功能。</p>
           </UIStep.Item>
         </UIStep>
+        <UITimeline>
+          <UITimeline.Item checked theme="primary">
+            <h4 className="ui-timeline-title">提交申请表 <small>2019-05-20</small></h4>
+            <p className="ui-timeline-content">向 tanboui 组件提交一份需求申请表。</p>
+          </UITimeline.Item>
+          <UITimeline.Item>
+            <h4 className="ui-timeline-title">提交申请表 <small>2019-05-20</small></h4>
+            <p className="ui-timeline-content">向 tanboui 组件提交一份需求申请表。</p>
+          </UITimeline.Item>
+          <UITimeline.Item>
+            <h4 className="ui-timeline-title">提交申请表 <small>2019-05-20</small></h4>
+            <p className="ui-timeline-content">向 tanboui 组件提交一份需求申请表。</p>
+          </UITimeline.Item>
+        </UITimeline>
       </div>
     </div>
   );
