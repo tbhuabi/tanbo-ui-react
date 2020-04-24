@@ -28,6 +28,7 @@
     "missing-jsdoc": [0],
     "no-angle-bracket-type-assertion": true,
     "no-any": false,
+    "linebreak-style": false,
     "no-cookies": [0],
     "no-default-export": [0],
     "no-empty-line-after-opening-brace": true,
